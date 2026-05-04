@@ -20,6 +20,16 @@
             background: #fff;
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+        .title {
+            padding: 24px 40px;
+            border-bottom: 1px solid #eee;
+            font-size: 24px;
+            font-weight: 700;
+            color: #2a2a2a;
+        }
+        .body {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 32px;
@@ -48,16 +58,19 @@
             font-style: italic;
         }
         @media (max-width: 720px) {
-            .card { grid-template-columns: 1fr; }
+            .body { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
     <div class="card">
-        <div class="image-box">
-            <img src="<%= image %>" alt="Pokénea">
+        <h1 class="title"><%= containerId %></h1>
+        <div class="body">
+            <div class="image-box">
+                <img src="<%= image %>" alt="Pokénea">
+            </div>
+            <p class="frase">"<%= frase %>"</p>
         </div>
-        <p class="frase">"<%= frase %>"</p>
     </div>
 </body>
 </html>
