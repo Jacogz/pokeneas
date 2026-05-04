@@ -15,6 +15,7 @@ const controller = {
             name: randomPokenea.name,
             height: randomPokenea.height,
             ability: randomPokenea.ability,
+            version: "v2",
         });
     },
     getRandomDetail: (req, res) => {
